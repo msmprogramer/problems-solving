@@ -27,6 +27,24 @@ public class PermMissingElem {
         return 0;
     }
 
+	import java.util.Arrays;
+
+class Solution {
+    public int solution(int[] A) {
+        
+        Arrays.sort(A);
+
+        for (int i = A[0]; i < A[A.length-1]; i++) {
+            
+                if((A[i] + 1) != A[i + 1]) {
+                    
+                    return (A[i] + 1);
+                }
+        }
+        
+        return -1;
+    }
+}
   /*  long N = A.length + 1;
     long sum = N * (N + 1) / 2;
 		for (int i = 0; i < A.length; i++) sum -= A[i];
